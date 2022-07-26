@@ -16,8 +16,11 @@ class HomePage extends StatelessWidget {
     return RepositoryProvider(
       create: (context) => CatsRepository(),
       child: BlocProvider(
-        create: (context) => CatsBloc(catsRepository: context.read<CatsRepository>())
-        ..add(CatsInitEvent()),
+        create: (context) => CatsBloc(
+          catsRepository: context.read<CatsRepository>(),
+        )..add(
+            CatsInitEvent(),
+          ),
         child: Scaffold(
           backgroundColor: Colors.white,
           appBar: AppBar(

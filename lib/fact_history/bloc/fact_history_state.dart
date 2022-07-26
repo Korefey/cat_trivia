@@ -6,4 +6,3 @@ abstract class FactHistoryState {}
 class FactHistoryInitial extends FactHistoryState {}
 
 class FactHistoryInitialized extends FactHistoryState {}
-

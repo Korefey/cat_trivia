@@ -7,15 +7,17 @@ import 'package:hive_flutter/hive_flutter.dart';
 void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(CatsAdapter());
-  runApp(CatTriviaApp());
+  runApp(const CatTriviaApp());
 }
 
 class CatTriviaApp extends StatelessWidget{
+  const CatTriviaApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        onGenerateRoute: router,//use MaterialApp() widget like this
-        home: HomePage(), //create new widget class for this 'home' to
+        onGenerateRoute: router,
+        home: HomePage(),
     );
   }
 }
